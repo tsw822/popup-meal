@@ -14,8 +14,12 @@ const fGenerate = () => {
       const sOut = aFile.join('.');
       try {
         const Page = require(`${sDir}/${sFile}`);
+        const oPage = new Page();
+        let sOutput = oPage.renderFirst(sPage);
+        sOutput += oPage.render(sPage);
+        sOutput += oPage.renderRemainder(sPage);
         // new Page().render(sPage) is the business. You can see how it works in the sample js files
-        fs.writeFileSync(`${sDir}/${sOut}`, new Page().render(sPage), { mode: 0o644 });
+        fs.writeFileSync(`${sDir}/${sOut}`, sOutput, { mode: 0o644 });
       } catch (err) {
         // An error occurred
         console.error(err);

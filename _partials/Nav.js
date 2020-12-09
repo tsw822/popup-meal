@@ -1,6 +1,9 @@
 const Page=require('./Page');
 
 module.exports = class extends Page{
+    constructor(options){
+        super(options);
+    }
     render() {
         return `
 <div class="navbar navbar-inverse navbar-static-top" role="navigation">

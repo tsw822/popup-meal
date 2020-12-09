@@ -2,8 +2,8 @@ const marked = require('marked');
 const fs = require('fs')
 
 module.exports = class{
-    constructor(){
-        this.sName = "Richard Hildred";
+    constructor(options){
+        Object.assign(this, options);
     }
     requireMarked(sFname){
         const sDir = process.cwd()

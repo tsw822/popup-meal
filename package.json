@@ -1,6 +1,6 @@
 {
-  "scripts":{
-    "start": "node ./partials/watcher.js"
+  "scripts": {
+    "start": "node ./_partials/watcher.js"
   },
   "dependencies": {
     "marked": "^1.2.5"

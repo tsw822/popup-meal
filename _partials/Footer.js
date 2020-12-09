@@ -1,6 +1,9 @@
 const Page = require("./Page");
 
 module.exports = class extends Page{
+    constructor(options){
+        super(options);
+    }
     render(){
         const yToday = new Date().getFullYear();
         return `
