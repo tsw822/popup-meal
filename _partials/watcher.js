@@ -13,6 +13,7 @@ const fGenerate = () => {
       aFile.push('html');
       const sOut = aFile.join('.');
       try {
+        delete require.cache[`${sDir}/${sFile}`];
         const Page = require(`${sDir}/${sFile}`);
         const oPage = new Page();
         let sOutput = oPage.renderFirst(sPage);
@@ -42,7 +43,7 @@ fWatcher = (sNewDir)=>{
     } else if(fStats.mtimeMs > stats.mtimeMs){
       // file is changed so we regenerate everything. It is quick and I 
       // couldn't think of a good way to match dependencies
-      fGenerate();
+    fGenerate();
       console.log(`change to ${sNewDir}/${sFile}`);
       return;      
     }
