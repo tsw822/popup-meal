@@ -40,10 +40,10 @@ fWatcher = (sNewDir)=>{
     if(fStats.isDirectory()){
       // recurse into directory
       fWatcher(`${sNewDir}/${sFile}`);
-    } else if(fStats.mtimeMs > stats.mtimeMs){
+    } else if(sFile.match(".js") && fStats.mtimeMs > stats.mtimeMs){
       // file is changed so we regenerate everything. It is quick and I 
       // couldn't think of a good way to match dependencies
-    fGenerate();
+      fGenerate();
       console.log(`change to ${sNewDir}/${sFile}`);
       return;      
     }

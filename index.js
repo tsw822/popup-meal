@@ -6,6 +6,7 @@ module.exports = class extends Page {
     }
     render(sPage) {
         return `
+        <img src="${this.resizeImage(`${__dirname}/img/lake.jpg`, 400)}" alt="lake"/>
         ${this.requireMarked('_pages/index.md')}
         `;
     }
