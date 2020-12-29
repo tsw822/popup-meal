@@ -16,7 +16,7 @@
 }
 
 main {
-    min-height: calc(100vh - 2em);
+    min-height: calc(100vh - 8em);
 }
 footer {
     height: 1em;

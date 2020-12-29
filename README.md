@@ -51,7 +51,7 @@ module.exports = class extends Page {
         super();
         Object.assign(this, options);
     }
-    renderFirst(sPage) {
+    renderHeadHeaderNav(sPage) {
         return `
 <!DOCTYPE html>
 <html lang="en" class="${sPage}">
@@ -60,12 +60,12 @@ module.exports = class extends Page {
     <title>${this.title}</title>
     </head>
     <body>
-    <main>
         ${new Header(this).render()}
         ${new Nav(this).render()}
+        <main>
     `;
     }
-    renderRemainder(sPage){
+    renderFooter(sPage){
         return `
     </main>
     ${new Footer(this).render()}
