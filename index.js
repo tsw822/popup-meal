@@ -1,13 +1,19 @@
+const fetch = require('sync-fetch');
 const Page = require("./_layout/Default");
 
 module.exports = class extends Page {
     constructor(){
         super({title:"Home", sName:"Richard Hildred"});
     }
-    render(sPage) {
-        return `
-        <img src="${this.resizeImage(`${__dirname}/img/lake.jpg`, 400)}" alt="lake"/>
-        ${this.requireMarked('_pages/index.md')}
-        `;
+    render(sPage){
+        const oJson = fetch("https://prog8110winter2021-default-rtdb.firebaseio.com/meals.json").json();
+        console.log(oJson);
+        let sResponse = "";
+        Object.keys(oJson).map((key) => {
+            const oEntity = oJson[key];
+            console.log(oEntity);
+            sResponse += `<p>${oEntity.title}</p>`
+        });
+        return sResponse;
     }
 }
