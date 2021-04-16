@@ -2,31 +2,194 @@
 
 /* color scheme */
 :root {
-    --header-bg-color: #222;
-    --header-txt-color: #aaa;
-    --header-highlight-color: white;
+  --header-bg-color: #222;
+  --header-txt-color: #aaa;
+  --header-highlight-color: white;
 }
 
-.contact .navbar-inverse .navbar-nav > li > a[href="contact.html"], 
+/* .contact .navbar-inverse .navbar-nav > li > a[href="contact.html"], 
 .about .navbar-inverse .navbar-nav > li > a[href="about.html"],
 .index .navbar-inverse a.navbar-brand[href="."]
 {
     color:var(--header-highlight-color);
     background-color: inherit;
+} */
+
+/* Header image slider css */
+.carousel-inner img {
+  width: 100%;
 }
 
-main {
-    min-height: calc(100vh - 8em);
+.carousel-caption {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 47%;
 }
+
+.carousel-caption h1 {
+  padding-bottom: 0.5rem;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  text-shadow: 0.1rem 0.1rem black;
+}
+
+.carousel-caption h3 {
+  padding-bottom: 1rem;
+  font-size: 3rem;
+  text-shadow: 0.1rem 0.1rem black;
+}
+
+.carousel-caption a {
+  border-width: medium;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 0%;
+}
+
+/* Jumbotron css */
+.jumbotron {
+  padding: 1rem;
+  border-radius: 0%;
+}
+
+/* main {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 5px;
+  margin: 20px;
+  min-height: calc(100vh - 8em);
+} */
+
+/* Footer connect section css */
+.social a {
+  font-size: 4rem;
+  padding: 3rem;
+  color: #85888c;
+}
+
+.social a:hover {
+  color: #563d71;
+}
+
+/* footer css */
 footer {
-    height: 1em;
+  background-color: #3f3f3f;
+  color: #b5b5b5;
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
 }
 
-.navbar-inverse{
+footer hr.border {
+  width: 75%;
+}
+
+/* .navbar-inverse{
     color:var(--header-txt-color);
     background-color: var(--header-bg-color);
 }
 
 .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a {
     color: inherit;
+} */
+
+/* Responsiveness */
+@media only screen and (max-width: 600px) {
+  main {
+    grid-template-columns: auto;
+    margin-left: 40px;
+  }
 }
+
+/*---Media Queries --*/
+/* One pixal down because the Bootstrap is at 992px. Here is 991px and beneath */
+@media (max-width: 991px) {
+  .carousel-caption {
+    top: 45%;
+  }
+
+  .carousel-caption h1 {
+    font-size: 4rem;
+  }
+
+  .carousel-caption h3 {
+    font-size: 2.5rem;
+  }
+
+  .carousel-caption a {
+    font-size: 1rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+  h1.display-5 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-caption {
+    top: 42%;
+  }
+
+  .carousel-caption h1 {
+    font-size: 3.2rem;
+  }
+
+  .carousel-caption h3 {
+    font-size: 1.8rem;
+    font-size: 400;
+    padding-bottom: 0.2rem;
+  }
+
+  .carousel-caption a {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+  h1.display-5 {
+    font-size: 1.8rem;
+  }
+
+  .social a {
+    font-size: 2.5rem;
+    padding: 1.2rem;
+  }
+}
+@media (max-width: 575px) {
+  .carousel-caption {
+    top: 39%;
+  }
+
+  .carousel-caption h1 {
+    font-size: 2.2rem;
+  }
+
+  .carousel-caption h3 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-caption a {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+    border-width: thin;
+  }
+
+  .col {
+    margin-left: 5rem;
+  }
+
+  h1.display-5 {
+    font-size: 1.2rem;
+  }
+
+  .social a {
+    font-size: 1.8rem;
+    padding: 0.7rem;
+  }
+}
+
+/* Tablet */
+/* @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  main {
+    grid-template-columns: auto;
+    margin-left: 40px;
+  }
+} */
