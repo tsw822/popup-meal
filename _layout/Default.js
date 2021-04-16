@@ -1,16 +1,16 @@
 const Page = require("../_partials/Page");
 const Head = require("../_partials/Head");
-const Header = require("../_partials/Header");
 const Nav = require("../_partials/Nav");
+const Header = require("../_partials/Header");
 const Footer = require("../_partials/Footer");
 
 module.exports = class extends Page {
-    constructor(options){
-        super();
-        Object.assign(this, options);
-    }
-    renderHeadHeaderNav(sPage) {
-        return `
+  constructor(options) {
+    super();
+    Object.assign(this, options);
+  }
+  renderHeadHeaderNav(sPage) {
+    return `
 <!DOCTYPE html>
 <html lang="en" class="${sPage}">
     <head>
@@ -18,17 +18,19 @@ module.exports = class extends Page {
     <title>${this.title}</title>
     </head>
     <body>
-        ${new Header(this).render()}
         ${new Nav(this).render()}
-        <main>
+        ${new Header(this).render()}        
+        <main class="container">      
+          <div class="row">              
     `;
-    }
-    renderFooter(sPage){
-        return `
+  }
+  renderFooter(sPage) {
+    return `  
+      </div>  
     </main>
     ${new Footer(this).render()}
     </body>
 </html>
         `;
-    }
-}
+  }
+};
