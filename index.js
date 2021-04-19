@@ -14,7 +14,7 @@ module.exports = class extends Page {
     <form name="orderForm" method="Post" action="">
     <div class="row">              
                   `;
-    let count = 0; 
+    let count = 0;
     Object.keys(oJson).map((key) => {
       const oEntity = oJson[key];
       console.log(oEntity);
@@ -22,20 +22,21 @@ module.exports = class extends Page {
       sResult += `
       
           <div class="col col-sm">
-            <div class="card" style="width:300px; height: 400px">  
+            <div class="card" style="width:300px; height: 450px; margin-top: 1rem;">  
                 <img class="card-image-top" src="${oEntity.featured_image}" alt="${oEntity.title}">
                 <div class="card-body">  
                     <h4 class="card-title">${oEntity.title}</h4>
                     <p class="card-text">${oEntity.full_description}</p>
                     <p class="card-text">$ ${oEntity.price}</p>
-                </div>
                     <input type="hidden" name="cardName${count}" value="${oEntity.title}" />
                     <input type="hidden" name="cardPrice${count}" value="${oEntity.price}" />
                     <input type="number" name="cardAmount${count}" placeholder="Order amount" />
+                </div>
+                    
               </div>    
           </div>          
             `;
-            count++;
+      count++;
     });
     // const oJson2 = fetch(
     //   "https://mobile-winter--todo-default-rtdb.firebaseio.com/meals.json"
@@ -46,11 +47,11 @@ module.exports = class extends Page {
     //   console.log(oEntity2);
     //   oEntity2.id = key;
     //   sResult += `
-      
+
     //       <div class="col col-sm">
-    //         <div class="card" style="width:300px; height: 400px">  
+    //         <div class="card" style="width:300px; height: 400px">
     //             <img class="card-image-top" src="${oEntity2.featured_image}" alt="${oEntity2.title}">
-    //             <div class="card-body">  
+    //             <div class="card-body">
     //                 <h4 class="card-title">${oEntity2.title}</h4>
     //                 <p class="card-text">${oEntity2.full_description}</p>
     //             </div>
@@ -59,25 +60,16 @@ module.exports = class extends Page {
     //                 <input type="tel" placeholder="enter your number" />
     //                 <button type="submit">Order now</button>
     //             </form>
-    //         </div>    
-    //       </div>                    
+    //         </div>
+    //       </div>
     //         `;
     // });
-    sResult +=`   </div> 
-      <button name="orderCalc">Order Calc</button>
+    sResult += `   
+    </div> 
+      <button type="button" class="btn btn-primary mt-3" name="orderCalc">Calculate your total</button>
 
     </form>
-    <form action="http://localhost:3002/payment" method="post">
-
-    <div class="order">
-        <p id="orderResult">Please check your order here.</p>
-        <br>
-        <input type="hidden" id="OrderId" value="" />
-        <input type="hidden" id="Total" value="" />
-        <input type="tel" placeholder="Enter your number" />
-        <button type="submit">Pay Now</button>
-    </div>
-</form>
+    
 
 
               `;
