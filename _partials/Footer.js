@@ -70,6 +70,10 @@ module.exports = class extends Page {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
+<script type="text/javascript" src="js/orderCalc.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css" />
+<script src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"></script>
         `;
   }
 };
