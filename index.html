@@ -106,82 +106,97 @@
                   
       
           <div class="col col-sm">
-            <div class="card" style="width:300px; height: 400px">  
+            <div class="card" style="width:300px; height: 450px; margin-top: 1rem;">  
                 <img class="card-image-top" src="https://cdn.pixabay.com/photo/2018/08/13/13/37/roasted-chicken-3602956_1280.jpg" alt="Smoked Chicken">
                 <div class="card-body">  
                     <h4 class="card-title">Smoked Chicken</h4>
                     <p class="card-text">Chinese style Chicken with onion, spicy and Chinese seasoning</p>
                     <p class="card-text">$ 13.99</p>
-                </div>
                     <input type="hidden" name="cardName0" value="Smoked Chicken" />
                     <input type="hidden" name="cardPrice0" value="13.99" />
                     <input type="number" name="cardAmount0" placeholder="Order amount" />
+                </div>
+                    
               </div>    
           </div>          
             
       
           <div class="col col-sm">
-            <div class="card" style="width:300px; height: 400px">  
+            <div class="card" style="width:300px; height: 450px; margin-top: 1rem;">  
                 <img class="card-image-top" src="https://cdn.pixabay.com/photo/2015/07/29/18/34/china-866410_1280.jpg" alt="Spicy Tofu">
                 <div class="card-body">  
                     <h4 class="card-title">Spicy Tofu</h4>
                     <p class="card-text">Spicy Tofu, a Chinese famous dishes, cooked with fresh tofu with hot spicy and beef ground</p>
                     <p class="card-text">$ 6.99</p>
-                </div>
                     <input type="hidden" name="cardName1" value="Spicy Tofu" />
                     <input type="hidden" name="cardPrice1" value="6.99" />
                     <input type="number" name="cardAmount1" placeholder="Order amount" />
+                </div>
+                    
               </div>    
           </div>          
             
       
           <div class="col col-sm">
-            <div class="card" style="width:300px; height: 400px">  
+            <div class="card" style="width:300px; height: 450px; margin-top: 1rem;">  
                 <img class="card-image-top" src="https://cdn.pixabay.com/photo/2017/09/08/22/17/soup-2730411_1280.jpg" alt="Pork Ball Soup">
                 <div class="card-body">  
                     <h4 class="card-title">Pork Ball Soup</h4>
                     <p class="card-text">Chinese Meat Ball Soup with green onions</p>
                     <p class="card-text">$ 5.99</p>
-                </div>
                     <input type="hidden" name="cardName2" value="Pork Ball Soup" />
                     <input type="hidden" name="cardPrice2" value="5.99" />
                     <input type="number" name="cardAmount2" placeholder="Order amount" />
+                </div>
+                    
               </div>    
           </div>          
             
       
           <div class="col col-sm">
-            <div class="card" style="width:300px; height: 400px">  
+            <div class="card" style="width:300px; height: 450px; margin-top: 1rem;">  
                 <img class="card-image-top" src="https://live.staticflickr.com/4030/4590116780_3b7d72d129_c_d.jpg" alt="Turkey Dinner">
                 <div class="card-body">  
                     <h4 class="card-title">Turkey Dinner</h4>
                     <p class="card-text">Good meal for whole family with turkey and vegetable</p>
                     <p class="card-text">$ 16.99</p>
-                </div>
                     <input type="hidden" name="cardName3" value="Turkey Dinner" />
                     <input type="hidden" name="cardPrice3" value="16.99" />
                     <input type="number" name="cardAmount3" placeholder="Order amount" />
+                </div>
+                    
               </div>    
           </div>          
-               </div> 
-      <button name="orderCalc">Order Calc</button>
-
+               
+    </div> 
+      <button class="btn btn-primary mt-3" name="orderCalc">Calculate your total</button>
+        
     </form>
     <form action="http://localhost:3002/payment" method="post">
 
     <div class="order">
-        <p id="orderResult">Please check your order here.</p>
-        <br>
-        <input type="hidden" id="OrderId" name="orderId" value="" />
-        <input type="hidden" id="Total" name="total" value="" />
-        <input type="tel" id="phone" name="phone" placeholder="Enter your number" />
-        <button type="submit">Pay Now</button>
+
+      <div class="card mt-3" style="width: 18rem;">
+        <div class="card-body">
+          <p class="card-title" id="orderResult">Please check your order here.</p>
+          <br>
+          <p class="card-text"><input type="hidden" id="orderId" name="orderId" value="" /></p>
+          <p class="card-text"><input type="hidden" id="total" name="total" value="" /></p>
+        </div>
+      </div> 
+
+        <div class="input-group mb-3 mt-3">
+          <input class="form-control" type="tel" name="phone" id="phone" placeholder="Enter your phone number" />
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-warning">Pay Now</button>
+          </div>
+        </div>
+
     </div>
-</form>
-
-
+  </form>
                 
-      </div>  
+        
+      </div>           
     </main>
     
     <!-- Add a horizontal line -->

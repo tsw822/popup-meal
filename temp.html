@@ -1,11 +1,10 @@
 <form action="http://localhost:3002/payment" method="post">
-
     <div class="order">
         <p id="orderResult">Please check your order here.</p>
         <p>Please Enter you phone Number:</p>
-        <input type="hidden" name="OrderId" value="" />
-        <input type="hidden" name="Total" value="" />
-        <input type="tel" placeholder="enter your number" />
+        <input type="hidden" id="OrderId" name="OrderId" value="" />
+        <input type="hidden" id="Total" name="Total" value="" />
+        <input type="tel" id="phone" name="phone" placeholder="enter your number" />
         <button type="submit">Pay Now</button>
     </div>
 </form>
