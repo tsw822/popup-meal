@@ -26,7 +26,8 @@ module.exports = class extends Page {
   }
   renderFooter(sPage) {
     return `  
-      </div>  
+        
+      </div>           
     </main>
     ${new Footer(this).render()}
     </body>
