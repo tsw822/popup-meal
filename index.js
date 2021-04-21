@@ -22,12 +22,14 @@ module.exports = class extends Page {
       sResult += `
       
           <div class="col col-sm">
-            <div class="card" style="width:300px; height: 450px; margin-top: 1rem;">  
+            <div class="card" style="width:300px; height: 550px; margin-top: 1rem;">  
                 <img class="card-image-top" src="${oEntity.featured_image}" alt="${oEntity.title}">
                 <div class="card-body">  
                     <h4 class="card-title">${oEntity.title}</h4>
                     <p class="card-text">${oEntity.full_description}</p>
                     <p class="card-text">$ ${oEntity.price}</p>
+                    <p class="card-text">${oEntity.location}</p>
+                    <p class="card-text">${oEntity.date}</p>
                     <input type="hidden" name="cardName${count}" value="${oEntity.title}" />
                     <input type="hidden" name="cardPrice${count}" value="${oEntity.price}" />
                     <input type="number" name="cardAmount${count}" placeholder="Order amount" />
