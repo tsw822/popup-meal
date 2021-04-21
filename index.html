@@ -1,15 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en" class="index">
-    <head>
-    
-
-        
+  <head>
     <title>Home</title>
-    </head>
-    <body>
-        
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
       <!-- Brand -->
       <a class="navbar-brand" href="index.html">Popup Meals Waterloo</a>
 
@@ -35,10 +30,9 @@
         </ul>
       </div>
     </nav>
-        
-        
-        <!-- your header here -->
-        <!--- Image Slider -->
+
+    <!-- your header here -->
+    <!--- Image Slider -->
     <div class="carousel slide" id="slides" data-ride="carousel">
       <ul class="carousel-indicators">
         <li class="active" data-target="#slides" data-slide-to="0"></li>
@@ -83,7 +77,7 @@
       </a>
     </div>
 
-     <!--- Jumbotron -->
+    <!--- Jumbotron -->
     <div class="container-fluid">
       <div class="row jumbotron text-center">
         <div class="col-lg-7 col-xl-8 pt-4">
@@ -96,94 +90,173 @@
         </div>
       </div>
     </div>
-    
-                
-        <main class="container">      
-          <div class="row">              
-    
-    <form name="orderForm" method="Post" action="">
-    <div class="row">              
-                  
-      
-          <div class="col col-sm">
-            <div class="card" style="width:300px; height: 400px">  
-                <img class="card-image-top" src="https://cdn.pixabay.com/photo/2018/08/13/13/37/roasted-chicken-3602956_1280.jpg" alt="Smoked Chicken">
-                <div class="card-body">  
-                    <h4 class="card-title">Smoked Chicken</h4>
-                    <p class="card-text">Chinese style Chicken with onion, spicy and Chinese seasoning</p>
-                    <p class="card-text">$ 13.99</p>
-                </div>
-                    <input type="hidden" name="cardName0" value="Smoked Chicken" />
-                    <input type="hidden" name="cardPrice0" value="13.99" />
-                    <input type="number" name="cardAmount0" placeholder="Order amount" />
-              </div>    
-          </div>          
-            
-      
-          <div class="col col-sm">
-            <div class="card" style="width:300px; height: 400px">  
-                <img class="card-image-top" src="https://cdn.pixabay.com/photo/2015/07/29/18/34/china-866410_1280.jpg" alt="Spicy Tofu">
-                <div class="card-body">  
-                    <h4 class="card-title">Spicy Tofu</h4>
-                    <p class="card-text">Spicy Tofu, a Chinese famous dishes, cooked with fresh tofu with hot spicy and beef ground</p>
-                    <p class="card-text">$ 6.99</p>
-                </div>
-                    <input type="hidden" name="cardName1" value="Spicy Tofu" />
-                    <input type="hidden" name="cardPrice1" value="6.99" />
-                    <input type="number" name="cardAmount1" placeholder="Order amount" />
-              </div>    
-          </div>          
-            
-      
-          <div class="col col-sm">
-            <div class="card" style="width:300px; height: 400px">  
-                <img class="card-image-top" src="https://cdn.pixabay.com/photo/2017/09/08/22/17/soup-2730411_1280.jpg" alt="Pork Ball Soup">
-                <div class="card-body">  
-                    <h4 class="card-title">Pork Ball Soup</h4>
-                    <p class="card-text">Chinese Meat Ball Soup with green onions</p>
-                    <p class="card-text">$ 5.99</p>
-                </div>
-                    <input type="hidden" name="cardName2" value="Pork Ball Soup" />
-                    <input type="hidden" name="cardPrice2" value="5.99" />
-                    <input type="number" name="cardAmount2" placeholder="Order amount" />
-              </div>    
-          </div>          
-            
-      
-          <div class="col col-sm">
-            <div class="card" style="width:300px; height: 400px">  
-                <img class="card-image-top" src="https://live.staticflickr.com/4030/4590116780_3b7d72d129_c_d.jpg" alt="Turkey Dinner">
-                <div class="card-body">  
-                    <h4 class="card-title">Turkey Dinner</h4>
-                    <p class="card-text">Good meal for whole family with turkey and vegetable</p>
-                    <p class="card-text">$ 16.99</p>
-                </div>
-                    <input type="hidden" name="cardName3" value="Turkey Dinner" />
-                    <input type="hidden" name="cardPrice3" value="16.99" />
-                    <input type="number" name="cardAmount3" placeholder="Order amount" />
-              </div>    
-          </div>          
-               </div> 
-      <button name="orderCalc">Order Calc</button>
 
-    </form>
-    <form action="http://localhost:3002/payment" method="post">
+    <main class="container">
+      <div class="row">
+        <form name="orderForm" method="Post" action="">
+          <div class="row">
+            <div class="col col-sm">
+              <div
+                class="card"
+                style="width: 300px; height: 550px; margin-top: 1rem"
+              >
+                <img
+                  class="card-image-top"
+                  src="https://cdn.pixabay.com/photo/2018/08/13/13/37/roasted-chicken-3602956_1280.jpg"
+                  alt="Smoked Chicken"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Smoked Chicken</h4>
+                  <p class="card-text">
+                    Chinese style Chicken with onion, spicy and Chinese
+                    seasoning
+                  </p>
+                  <p class="card-text">$ 13.99</p>
+                  <p class="card-text">undefined</p>
+                  <p class="card-text">undefined</p>
+                  <input
+                    type="hidden"
+                    name="cardName0"
+                    value="Smoked Chicken"
+                  />
+                  <input type="hidden" name="cardPrice0" value="13.99" />
+                  <input
+                    type="number"
+                    name="cardAmount0"
+                    placeholder="Order amount"
+                  />
+                </div>
+              </div>
+            </div>
 
-    <div class="order">
-        <p id="orderResult">Please check your order here.</p>
-        <br>
-        <input type="hidden" id="OrderId" value="" />
-        <input id="Total" value="" />
-        <input type="tel" placeholder="enter your number" />
-        <button type="submit">Pay Now</button>
-    </div>
-</form>
+            <div class="col col-sm">
+              <div
+                class="card"
+                style="width: 300px; height: 550px; margin-top: 1rem"
+              >
+                <img
+                  class="card-image-top"
+                  src="https://cdn.pixabay.com/photo/2015/07/29/18/34/china-866410_1280.jpg"
+                  alt="Spicy Tofu"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Spicy Tofu</h4>
+                  <p class="card-text">
+                    Spicy Tofu, a Chinese famous dishes, cooked with fresh tofu
+                    with hot spicy and beef ground
+                  </p>
+                  <p class="card-text">$ 6.99</p>
+                  <p class="card-text">undefined</p>
+                  <p class="card-text">undefined</p>
+                  <input type="hidden" name="cardName1" value="Spicy Tofu" />
+                  <input type="hidden" name="cardPrice1" value="6.99" />
+                  <input
+                    type="number"
+                    name="cardAmount1"
+                    placeholder="Order amount"
+                  />
+                </div>
+              </div>
+            </div>
 
+            <div class="col col-sm">
+              <div
+                class="card"
+                style="width: 300px; height: 550px; margin-top: 1rem"
+              >
+                <img
+                  class="card-image-top"
+                  src="https://cdn.pixabay.com/photo/2017/09/08/22/17/soup-2730411_1280.jpg"
+                  alt="Pork Ball Soup"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Pork Ball Soup</h4>
+                  <p class="card-text">
+                    Chinese Meat Ball Soup with green onions
+                  </p>
+                  <p class="card-text">$ 5.99</p>
+                  <p class="card-text">undefined</p>
+                  <p class="card-text">undefined</p>
+                  <input
+                    type="hidden"
+                    name="cardName2"
+                    value="Pork Ball Soup"
+                  />
+                  <input type="hidden" name="cardPrice2" value="5.99" />
+                  <input
+                    type="number"
+                    name="cardAmount2"
+                    placeholder="Order amount"
+                  />
+                </div>
+              </div>
+            </div>
 
-                
-      </div>  
+            <div class="col col-sm">
+              <div
+                class="card"
+                style="width: 300px; height: 550px; margin-top: 1rem"
+              >
+                <img
+                  class="card-image-top"
+                  src="https://live.staticflickr.com/4030/4590116780_3b7d72d129_c_d.jpg"
+                  alt="Turkey Dinner"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Turkey Dinner</h4>
+                  <p class="card-text">
+                    Good meal for whole family with turkey and vegetable
+                  </p>
+                  <p class="card-text">$ 16.99</p>
+                  <p class="card-text">undefined</p>
+                  <p class="card-text">undefined</p>
+                  <input type="hidden" name="cardName3" value="Turkey Dinner" />
+                  <input type="hidden" name="cardPrice3" value="16.99" />
+                  <input
+                    type="number"
+                    name="cardAmount3"
+                    placeholder="Order amount"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary mt-3" name="orderCalc">
+            Calculate your total
+          </button>
+        </form>
+        <form action="http://localhost:3002/payment" method="post">
+          <div class="order">
+            <div class="card mt-3" style="width: 18rem">
+              <div class="card-body">
+                <p class="card-title" id="orderResult">
+                  Please check your order here.
+                </p>
+                <br />
+                <p class="card-text">
+                  <input type="hidden" id="OrderId" value="" />
+                </p>
+                <p class="card-text">
+                  <input type="hidden" id="Total" value="" />
+                </p>
+              </div>
+            </div>
+
+            <div class="input-group mb-3 mt-3">
+              <input
+                class="form-control"
+                type="tel"
+                placeholder="Enter your phone number"
+              />
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-warning">Pay Now</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
     </main>
-    
+
     <!-- Add a horizontal line -->
     <hr class="my-4" />
 
@@ -209,8 +282,8 @@
         </div>
       </div>
     </div>
-<footer>
-<div class="container-fluid">
+    <footer>
+      <div class="container-fluid">
         <div class="row text-center">
           <div class="col-md-4">
             <h5>Contact us</h5>
@@ -238,21 +311,27 @@
           <!-- Copyright -->
           <div class="col-12">
             <hr class="socket" />
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> Li Deng</p>
+            <p>
+              &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              Li Deng
+            </p>
           </div>
         </div>
       </div>
-    
-</footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="js/main.js"></script>
-<script type="text/javascript" src="js/orderCalc.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/main.css" />
-<script src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"></script>
-        
-    </body>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/orderCalc.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"></script>
+  </body>
 </html>
-        
