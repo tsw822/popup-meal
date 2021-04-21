@@ -71,9 +71,8 @@ $(function(){
         console.log(myOutput);
         
         document.getElementById('orderResult').innerHTML = myOutput;
-        document.getElementById('Total').value = Total.toFixed(2);
-        document.getElementById('OrderId').value = OrderId;
-
+        document.getElementById('total').value = Total.toFixed(2);
+        document.getElementById('orderId').value = OrderId;
         return false;
     });
 });
