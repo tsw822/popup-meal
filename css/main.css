@@ -55,7 +55,7 @@
 /* Card image overwrite */
 .card-img-top {
   width: 100%;
-  height: 15vw;
+  height: 10vw;
   object-fit: cover;
 }
 
@@ -108,7 +108,7 @@ footer hr.border {
 }
 
 /*---Media Queries --*/
-/* One pixal down because the Bootstrap is at 992px. Here is 991px and beneath */
+/* One pixel down because the Bootstrap is at 992px. Here is 991px and beneath */
 @media (max-width: 991px) {
   .carousel-caption {
     top: 45%;
@@ -129,6 +129,12 @@ footer hr.border {
 
   h1.display-5 {
     font-size: 2.2rem;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
   }
 }
 
@@ -158,6 +164,12 @@ footer hr.border {
   .social a {
     font-size: 2.5rem;
     padding: 1.2rem;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 30vw;
+    object-fit: cover;
   }
 }
 @media (max-width: 575px) {
@@ -190,6 +202,12 @@ footer hr.border {
   .social a {
     font-size: 1.8rem;
     padding: 0.7rem;
+  }
+
+  .card-img-top {
+    width: 100%;
+    height: 35vw;
+    object-fit: cover;
   }
 }
 
